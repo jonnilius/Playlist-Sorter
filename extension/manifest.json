@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Playlist Sorter",
+  "version": "1.0.0",
+  "description": "Sortiert YouTube-Playlists.",
+
+  "icons": {
+    "48":   "icons/playlist-sorter-48.png",
+    "96":   "icons/playlist-sorter-96.png",
+    "1254": "icons/playlist-sorter-1254.png"
+  },
+
+  "permissions": ["storage"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "playlist-sorter@jonnilius",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["playlist-sorter.js"]
+  },
+  {
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["playlist-sorter-page.js"],
+    "world": "MAIN"
+  }
+]
+}
