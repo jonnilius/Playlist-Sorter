@@ -220,15 +220,6 @@ async function getAuth() {
     return `SAPISIDHASH ${time}_${hash}`;
 }
 
-// async function getInitialData(playlistId) {
-//     const response = await fetch(`https://www.youtube.com/playlist?list=${playlistId}`, { credentials: "include" });
-//     const html     = await response.text();
-
-//     const htmlMatch = html.match(/ytInitialData\s*=\s*(\{.*?\});<\/script>/s) || html.match(/ytInitialData"?\]?\s*=\s*(\{.*?\});/s);
-    
-//     try { return htmlMatch ? JSON.parse(htmlMatch[1]) : null; } 
-//     catch { return null; }
-// }
 
 
 
